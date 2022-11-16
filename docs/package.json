@@ -1,0 +1,19 @@
+{
+  "name": "php-orchestra-docs",
+  "version": "0.0.1",
+  "description": "A PHP project orchestrator",
+  "main": "index.js",
+  "authors": {
+    "name": "Rudi R",
+    "email": "rudi.rocha@gmail.com"
+  },
+  "repository": "https://github.com/PHP-Orchestra/docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
