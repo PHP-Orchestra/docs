@@ -52,7 +52,8 @@ module.exports = {
           title: 'Guide',
           collapsable: false,
           children: [
-            '',
+            '/guide/',
+            'getting-started'
           ]
         }
       ],
