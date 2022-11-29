@@ -4,6 +4,7 @@ export default  {
   theme: defaultTheme({
     // default theme config
     colorMode: 'auto',
+    docsRepo: 'php-orchestra/docs',
     navbar: [
       {
         text: 'Home',
@@ -14,11 +15,16 @@ export default  {
         link: '/guide/',
       },
     ],
+    repo: 'php-orchestra/orchestra',
     sidebar: [
       {
         text: 'Guide',
         link: '/guide/',
         children: [
+          {
+            text: 'Introduction',
+            link: '/guide/'
+          },
           {
             text: 'Getting Started',
             link: '/guide/getting-started'
