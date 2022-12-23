@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "PHP Orchestra documentation",
   "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
   "repository": "https://github.com/PHP-Orchestra/docs.git",
   "author": "Rúdi Rocha <rudi.rocha@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.53"
-  },
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "@vuepress/client": "2.0.0-beta.59",
+    "vue": "^3.2.45",
+    "vuepress": "2.0.0-beta.59"
   }
 }
