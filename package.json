@@ -6,7 +6,7 @@
   "repository": "https://github.com/PHP-Orchestra/docs.git",
   "author": "Rúdi Rocha <rudi.rocha@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
+  "Dependencies": {
     "vuepress": "^2.0.0-beta.53"
   },
   "scripts": {
