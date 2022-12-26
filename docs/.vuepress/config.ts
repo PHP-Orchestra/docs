@@ -1,6 +1,9 @@
 import { defaultTheme } from 'vuepress'
 
 export default  {
+  base: '/docs/',
+  lang: 'en-US',
+  description: 'PHP Orchestra is a PHP Project Orchestrator, allowing engineers to have more flexibility when creating new PHP applications.',
   theme: defaultTheme({
     // default theme config
     colorMode: 'auto',
