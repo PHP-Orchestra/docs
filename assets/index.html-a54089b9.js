@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-8daa1a0e","path":"/","title":"PHP Orchestra","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1669576908000,"contributors":[{"name":"Rúdi Rocha","email":"rudi.rocha@gmail.com","commits":1}]},"filePathRelative":"README.md"}');export{a as data};
