@@ -10,7 +10,7 @@ solution:initialize
 
 #### short form
 ```sh:no-line-numbers
-s:i
+s:init
 ```
 
 The result of this command execution will be a `orchestra.json` file at the `working-dir` path defined (default value is `.`).
