@@ -1,4 +1,4 @@
-# initialize Solution
+# initialize
 
 `initialize` is a basic command allowing a solution to be created from scratch. The `solution` file can be created with or without scaning for projects.
 

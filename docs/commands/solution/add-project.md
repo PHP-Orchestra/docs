@@ -1,4 +1,4 @@
-# Add a Project to a Solution
+# add-project
 
 `add-project` is a command allowing a given project  to be added to the solution.
 
