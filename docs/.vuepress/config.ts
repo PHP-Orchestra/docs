@@ -42,7 +42,10 @@ export default  {
             text: 'Solution',
             link: '/commands/solution/initialize',
             children: [
-              '/commands/solution/initialize'
+              '/commands/solution/initialize',
+              '/commands/solution/add-project',
+              '/commands/solution/remove-project',
+              '/commands/solution/install-dependencies',
             ]
           }
         ]

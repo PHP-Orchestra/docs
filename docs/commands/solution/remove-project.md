@@ -1,4 +1,4 @@
-# Remove a Project from a Solution
+# remove-project
 
 `remove-project` is a command allowing a given project  to be removed from the solution. Additionally, the files can be removed from the storage.
 
