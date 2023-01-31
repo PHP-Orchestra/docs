@@ -1,0 +1,25 @@
+import{_ as a,p as s,q as n,a1 as e}from"./framework-96b046e1.js";const o={},t=e(`<h1 id="remove-project" tabindex="-1"><a class="header-anchor" href="#remove-project" aria-hidden="true">#</a> remove-project</h1><p><code>remove-project</code> is a command allowing a given project to be removed from the solution. Additionally, the files can be removed from the storage.</p><h2 id="command-execution" tabindex="-1"><a class="header-anchor" href="#command-execution" aria-hidden="true">#</a> Command execution</h2><h4 id="regular-form" tabindex="-1"><a class="header-anchor" href="#regular-form" aria-hidden="true">#</a> regular form</h4><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>solution:remove-project <span class="token operator">&lt;</span>project-dir<span class="token operator">&gt;</span>
+</code></pre></div><h4 id="short-form" tabindex="-1"><a class="header-anchor" href="#short-form" aria-hidden="true">#</a> short form</h4><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>s:remove <span class="token operator">&lt;</span>project-dir<span class="token operator">&gt;</span>
+</code></pre></div><p>This command will result in removing an entry from the <code>projects</code> attribute of your <code>orchestra.json</code> file.</p><h5 id="before" tabindex="-1"><a class="header-anchor" href="#before" aria-hidden="true">#</a> before</h5><div class="language-json" data-ext="json"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Orchestra Solution&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;projects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;orchestra-example\\/web-app&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;.\\/webApp&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h5 id="after" tabindex="-1"><a class="header-anchor" href="#after" aria-hidden="true">#</a> after</h5><div class="language-json" data-ext="json"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Orchestra Solution&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;projects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="command-options" tabindex="-1"><a class="header-anchor" href="#command-options" aria-hidden="true">#</a> Command options</h2><h3 id="delete-files" tabindex="-1"><a class="header-anchor" href="#delete-files" aria-hidden="true">#</a> <code>delete-files</code></h3><p>Passing <code>--delete-files</code> option, the project folder will be removed form the storage. The command will ask for a manual confirmation, as this is a destructive operation.</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>solution:remove-project --delete-files
+</code></pre></div><h4 id="result" tabindex="-1"><a class="header-anchor" href="#result" aria-hidden="true">#</a> result</h4><div class="language-json" data-ext="json"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;My solution name&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;projects&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div>`,18),p=[t];function r(c,l){return s(),n("div",null,p)}const u=a(o,[["render",r],["__file","remove-project.html.vue"]]);export{u as default};

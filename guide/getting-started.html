@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.59">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <title>Getting started with PHP Orchestra</title><meta name="description" content="PHP Orchestra is a PHP Project Orchestrator, allowing engineers to have more flexibility when creating new PHP applications.">
+    <link rel="preload" href="/docs/assets/style-6f79918c.css" as="style"><link rel="stylesheet" href="/docs/assets/style-6f79918c.css">
+    <link rel="modulepreload" href="/docs/assets/app-9c4d38b2.js"><link rel="modulepreload" href="/docs/assets/framework-96b046e1.js"><link rel="modulepreload" href="/docs/assets/getting-started.html-68ed1ecb.js"><link rel="modulepreload" href="/docs/assets/getting-started.html-c28d55ce.js"><link rel="prefetch" href="/docs/assets/index.html-a54089b9.js" as="script"><link rel="prefetch" href="/docs/assets/index.html-aee60d51.js" as="script"><link rel="prefetch" href="/docs/assets/index.html-69147db2.js" as="script"><link rel="prefetch" href="/docs/assets/add-project.html-b6a4f993.js" as="script"><link rel="prefetch" href="/docs/assets/initialize.html-ad9fd2b6.js" as="script"><link rel="prefetch" href="/docs/assets/install-dependencies.html-4fe0a0c7.js" as="script"><link rel="prefetch" href="/docs/assets/remove-project.html-3fea841e.js" as="script"><link rel="prefetch" href="/docs/assets/404.html-60b35caa.js" as="script"><link rel="prefetch" href="/docs/assets/index.html-cc44b39c.js" as="script"><link rel="prefetch" href="/docs/assets/index.html-cb903dd6.js" as="script"><link rel="prefetch" href="/docs/assets/index.html-7a1597a7.js" as="script"><link rel="prefetch" href="/docs/assets/add-project.html-79950bd3.js" as="script"><link rel="prefetch" href="/docs/assets/initialize.html-5ceb6130.js" as="script"><link rel="prefetch" href="/docs/assets/install-dependencies.html-e76b9351.js" as="script"><link rel="prefetch" href="/docs/assets/remove-project.html-0bb03e24.js" as="script"><link rel="prefetch" href="/docs/assets/404.html-46166703.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/docs/" class=""><!----><!--v-if--></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><nav class="navbar-items can-hide"><!--[--><div class="navbar-item"><a href="/docs/" class="" aria-label="Home"><!--[--><!--]--> Home <!--[--><!--]--></a></div><div class="navbar-item"><a href="/docs/guide/" class="router-link-active" aria-label="Guide"><!--[--><!--]--> Guide <!--[--><!--]--></a></div><div class="navbar-item"><a class="external-link" href="https://github.com/php-orchestra/orchestra" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-color-mode-button" title="toggle color mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><nav class="navbar-items"><!--[--><div class="navbar-item"><a href="/docs/" class="" aria-label="Home"><!--[--><!--]--> Home <!--[--><!--]--></a></div><div class="navbar-item"><a href="/docs/guide/" class="router-link-active" aria-label="Guide"><!--[--><!--]--> Guide <!--[--><!--]--></a></div><div class="navbar-item"><a class="external-link" href="https://github.com/php-orchestra/orchestra" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-items"><!--[--><li><a href="/docs/guide/" class="router-link-active sidebar-item sidebar-heading active" aria-label="Guide"><!--[--><!--]--> Guide <!--[--><!--]--></a><ul style="" class="sidebar-item-children"><!--[--><li><a href="/docs/guide/" class="router-link-active sidebar-item" aria-label="Introduction"><!--[--><!--]--> Introduction <!--[--><!--]--></a><!----></li><li><a href="/docs/guide/getting-started" class="router-link-active sidebar-item active" aria-label="Getting Started"><!--[--><!--]--> Getting Started <!--[--><!--]--></a><!----></li><!--]--></ul></li><li><a href="/docs/commands/" class="sidebar-item sidebar-heading" aria-label="Commands"><!--[--><!--]--> Commands <!--[--><!--]--></a><ul style="" class="sidebar-item-children"><!--[--><li><a href="/docs/commands/solution/initialize" class="sidebar-item" aria-label="Solution"><!--[--><!--]--> Solution <!--[--><!--]--></a><ul style="" class="sidebar-item-children"><!--[--><li><a href="/docs/commands/solution/initialize.html" class="sidebar-item" aria-label="initialize"><!--[--><!--]--> initialize <!--[--><!--]--></a><!----></li><li><a href="/docs/commands/solution/add-project.html" class="sidebar-item" aria-label="add-project"><!--[--><!--]--> add-project <!--[--><!--]--></a><!----></li><li><a href="/docs/commands/solution/remove-project.html" class="sidebar-item" aria-label="remove-project"><!--[--><!--]--> remove-project <!--[--><!--]--></a><!----></li><li><a href="/docs/commands/solution/install-dependencies.html" class="sidebar-item" aria-label="install-dependencies"><!--[--><!--]--> install-dependencies <!--[--><!--]--></a><!----></li><!--]--></ul></li><!--]--></ul></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><!--]--><div><h1 id="getting-started-with-php-orchestra" tabindex="-1"><a class="header-anchor" href="#getting-started-with-php-orchestra" aria-hidden="true">#</a> Getting started with PHP Orchestra</h1><nav class="table-of-contents"><ul><li><a aria-current="page" href="/docs/guide/getting-started.html#prerequisites" class="router-link-active router-link-exact-active">Prerequisites</a></li><li><a aria-current="page" href="/docs/guide/getting-started.html#installation" class="router-link-active router-link-exact-active">Installation</a></li><li><a aria-current="page" href="/docs/guide/getting-started.html#creating-your-first-solution" class="router-link-active router-link-exact-active">Creating your first solution</a><ul><li><a aria-current="page" href="/docs/guide/getting-started.html#creating-a-solution-from-scratch" class="router-link-active router-link-exact-active">Creating a solution from scratch</a></li></ul></li></ul></nav><h2 id="prerequisites" tabindex="-1"><a class="header-anchor" href="#prerequisites" aria-hidden="true">#</a> Prerequisites</h2><ul><li><code>PHP &gt;= 8.1</code></li><li>Composer</li></ul><h2 id="installation" tabindex="-1"><a class="header-anchor" href="#installation" aria-hidden="true">#</a> Installation</h2><p>The best way to get <code>orchestra</code> is to download it directly from the repo: <a href="https://github.com/PHP-Orchestra/orchestra/raw/main/bin/orchestra.phar" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Orchestra-latest-brightgreen" alt="Download Orchestra"><span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></p><div class="language-SH line-numbers-mode" data-ext="SH"><pre class="language-SH"><code>curl -L https://github.com/PHP-Orchestra/orchestra/raw/main/bin/orchestra.phar -o orchestra.phar
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>In case you want to use it anywhere, just move it into your <code>PATH</code>:</p><div class="language-SH line-numbers-mode" data-ext="SH"><pre class="language-SH"><code>sudo mv orchestra.phar /usr/local/bin/orchestra
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="creating-your-first-solution" tabindex="-1"><a class="header-anchor" href="#creating-your-first-solution" aria-hidden="true">#</a> Creating your first <code>solution</code></h2><p>Once you have <code>orchestra</code> installed and working, than it&#39;s time to create your first <code>solution</code>.</p><h3 id="creating-a-solution-from-scratch" tabindex="-1"><a class="header-anchor" href="#creating-a-solution-from-scratch" aria-hidden="true">#</a> Creating a <code>solution</code> from scratch</h3><p>For full flexibility, you can create your project structure and then make <code>orchestra</code> to <code>initialize</code> a new solution. Let&#39;s consider the following example:</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>$ tree
+.
+├── businessLogic
+│   └── src
+├── entities
+│   ├── src
+└── webApp
+    └── src
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Where:</p><ul><li><strong>entities</strong> to contain the domain entities of your application</li><li><strong>businessLogic</strong> to contain the logic that makes your application to produce the desired outcomes, only depending on the <strong>entities</strong> layer</li><li><strong>webApp</strong> to contain the <code>Request/Response</code> layer, for example, your <code>PHP</code> framework of choice.</li></ul><p>Keeping in mind the basic concept of <a href="https://getcomposer.org/doc/00-intro.md" target="_blank" rel="noopener noreferrer">Composer - introduction<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a>, that your project depends on a number of libraries, and those libraries can depend on another libraries, each of those folders (layers) will contain their own <code>composer.json</code> file. This is a mandatory step for <code>orchestra</code> to coordinate each project inside your application and to support it&#39;s orchestration. So, the next step is to run <code>composer init</code> on each of the project layers.</p><div class="language-SH line-numbers-mode" data-ext="SH"><pre class="language-SH"><code>cat entities/composer.json
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="language-JSON line-numbers-mode" data-ext="JSON"><pre class="language-JSON"><code>{
+    &quot;name&quot;: &quot;orchestra-example/entities&quot;,
+    &quot;description&quot;: &quot;The Entities layer of my application&quot;,
+    &quot;type&quot;: &quot;library&quot;,
+    &quot;license&quot;: &quot;MIT&quot;,
+    &quot;autoload&quot;: {
+        &quot;psr-4&quot;: {
+            &quot;OrchestraExample\\Entities\\&quot;: &quot;src/&quot;
+        }
+    },
+    &quot;require&quot;: {}
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>After all 3 <code>composer.json</code> files are created, your project should look like:</p><div class="language-SH line-numbers-mode" data-ext="SH"><pre class="language-SH"><code>.
+├── businessLogic
+│   ├── composer.json
+│   └── src
+├── entities
+│   ├── composer.json
+│   └── src
+└── webApp
+    ├── composer.json
+    └── src
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="creating-project-s-solution-file" tabindex="-1"><a class="header-anchor" href="#creating-project-s-solution-file" aria-hidden="true">#</a> Creating project&#39;s solution file</h4><p>At your applications root folder run:</p><div class="language-SH line-numbers-mode" data-ext="SH"><pre class="language-SH"><code>orchestra solution:initialize --project-scan
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>. This command will create the <code>solution</code> file (<code>orchestra.json</code>) and scan for existent projects to be part of it.</p><div class="language-JSON line-numbers-mode" data-ext="JSON"><pre class="language-JSON"><code>{
+    &quot;name&quot;: &quot;Orchestra Solution&quot;,
+    &quot;version&quot;: &quot;0.1&quot;,
+    &quot;projects&quot;: [
+        {
+            &quot;name&quot;: &quot;orchestra-example\/business-logic&quot;,
+            &quot;path&quot;: &quot;.\/businessLogic&quot;
+        },
+        {
+            &quot;name&quot;: &quot;orchestra-example\/entities&quot;,
+            &quot;path&quot;: &quot;.\/entities&quot;
+        },
+        {
+            &quot;name&quot;: &quot;orchestra-example\/web-app&quot;,
+            &quot;path&quot;: &quot;.\/webApp&quot;
+        }
+    ]
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="installing-composer-dependencies" tabindex="-1"><a class="header-anchor" href="#installing-composer-dependencies" aria-hidden="true">#</a> Installing composer dependencies</h4><p>Now your application can be managed by <code>orchestra</code>. To install Composer&#39;s dependencies, just run:</p><div class="language-SH line-numbers-mode" data-ext="SH"><pre class="language-SH"><code>orchestra solution:install-dependencies
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>And now each project has it&#39;s composer <code>vendor</code> folder with the <code>autoloader</code> ready to provide it&#39;s funcionality</p><div class="language-SH line-numbers-mode" data-ext="SH"><pre class="language-SH"><code>.
+├── businessLogic
+│   ├── composer.json
+│   ├── composer.lock
+│   ├── src
+│   └── vendor
+│       ├── autoload.php
+│       └── composer
+│           ├── autoload_classmap.php
+│           ├── autoload_namespaces.php
+│           ├── autoload_psr4.php
+│           ├── autoload_real.php
+│           ├── autoload_static.php
+│           ├── ClassLoader.php
+│           ├── installed.json
+│           ├── installed.php
+│           ├── InstalledVersions.php
+│           └── LICENSE
+├── entities
+│   ├── composer.json
+│   ├── composer.lock
+│   ├── src
+│   └── vendor
+│       ├── autoload.php
+│       └── composer
+│           ├── autoload_classmap.php
+│           ├── autoload_namespaces.php
+│           ├── autoload_psr4.php
+│           ├── autoload_real.php
+│           ├── autoload_static.php
+│           ├── ClassLoader.php
+│           ├── installed.json
+│           ├── installed.php
+│           ├── InstalledVersions.php
+│           └── LICENSE
+├── orchestra.json
+└── webApp
+    ├── composer.json
+    ├── composer.lock
+    ├── src
+    └── vendor
+        ├── autoload.php
+        └── composer
+            ├── autoload_classmap.php
+            ├── autoload_namespaces.php
+            ├── autoload_psr4.php
+            ├── autoload_real.php
+            ├── autoload_static.php
+            ├── ClassLoader.php
+            ├── installed.json
+            ├── installed.php
+            ├── InstalledVersions.php
+            └── LICENSE
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!--[--><!--]--></div><footer class="page-meta"><div class="meta-item edit-link"><a class="external-link meta-item-label" href="https://github.com/php-orchestra/docs/edit/main/guide/getting-started.md" rel="noopener noreferrer" target="_blank" aria-label="Edit this page"><!--[--><!--]--> Edit this page <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: rudi.rocha@gmail.com">Rúdi Rocha</span><!----><!--]--><!--]--></span></div></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/docs/assets/app-9c4d38b2.js" defer></script>
+  </body>
+</html>
